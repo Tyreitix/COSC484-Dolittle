@@ -17,10 +17,6 @@ const App = () => {
      <Navbar />
      <Routes>
        <Route exact path="/" element={<Homepage />} />
-<<<<<<< HEAD
-       <Route exact path="/login" element={<Login />} />
-=======
->>>>>>> 9248ab852324baf731677d5cbf34b0f89b379d05
        <Route path="/edit/:id" element={<Edit />} />
        <Route path="/create" element={<Create />} />
        <Route path="/login" element={<Login />} />
