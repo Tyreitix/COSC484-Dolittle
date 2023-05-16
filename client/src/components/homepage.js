@@ -41,9 +41,9 @@ export default function Homepage() {
       <SearchBar handleFormSubmit={handleSubmit} />
 
       <div className='ui grid'>
-        <div className="ui row">
-          <div className="eleven wide column">
-            <VideoDetail video={selectedVideo} />
+        <div className="ui row" style={{margin: '0 auto', position: 'absolute'}}>
+          <div className="eleven wide column" style={{textAlign: 'center'}}>
+            <VideoDetail style={{'text-align': 'center'}} video={selectedVideo} />
           </div>
           <div className="five wide column">
             <VideoList handleVideoSelect={handleVideoSelect} videos={videos} />
