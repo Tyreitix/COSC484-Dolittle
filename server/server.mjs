@@ -11,6 +11,10 @@ app.use(express.json());
 
 app.use("/user", users);
 
+app.get("/", (req, res) => {
+  res.send("testing");
+});
+
 // start the Express server
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
