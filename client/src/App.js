@@ -8,7 +8,7 @@ import Navbar from "./components/navbar";
 import UserList from "./components/userList";
 import Edit from "./components/edit";
 import Create from "./components/create";
-import Login from "./components/loginPage"
+import Login from "./components/loginPage";
  
 const App = () => {
  return (

@@ -5,7 +5,7 @@ import axios from '../api/axios';
 const LOGIN_URL = '/user';
 
 
-const Login = () => {
+export default function Login () {
     const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
@@ -85,6 +85,4 @@ const Login = () => {
         </p>
     </section>
   )
-}
-
-export default Login
+};
