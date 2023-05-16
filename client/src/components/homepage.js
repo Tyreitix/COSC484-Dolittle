@@ -34,8 +34,9 @@ export default function Homepage() {
 
   return (
     <div>
-      <h1>Welcome to the Home Page!</h1>
+      <h1 style={{ 'text-align': 'center'}}>Welcome to DoLittle!</h1>
       <SearchBar handleFormSubmit={handleSubmit} />
+
       <div className='ui grid'>
         <div className="ui row">
           <div className="eleven wide column">

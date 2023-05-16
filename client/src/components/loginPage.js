@@ -1,6 +1,8 @@
 import {useRef, useState, useEffect, useContext} from 'react';
 import AuthContext from '../context/AuthProvider';
 import axios from '../api/axios';
+import '../styles/login.css';
+
 
 const LOGIN_URL = '/user';
 
@@ -50,11 +52,11 @@ export default function Login () {
     }
 
   return (
-    <section>
+    <div className='loginSec' >
         <p ref={errRef} className={errMsg ? "errmsg" : 
         "offscreen"} aria-live='assertive'>{errMsg}</p>
         <h1>Sign In</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='loginSecForm'>
             <label htmlFor='email'>Email:</label>
             <input 
                 type='text'
@@ -75,14 +77,14 @@ export default function Login () {
                 value={pwd}
                 required
                 />
-                <button>Sign In</button>
+                <button style={{marginTop: 5}}>Sign In</button>
         </form>
         <p>
-            Need an Account?<br />
-            <span className='line'>
+            Need an Account?
+            <span className='line' style={{marginLeft: 5}}>
                 <a href='/create'>Sign Up</a>
             </span>
         </p>
-    </section>
+    </div>
   )
 };

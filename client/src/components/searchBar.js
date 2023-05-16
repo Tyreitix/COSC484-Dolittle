@@ -1,27 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
+import TextField from '@mui/material/TextField';
 
 class Searchbar extends React.Component {
-    handleChange = (event) => {
-        this.setState({
-            term: event.target.value
-        });
     
-    };
+
+
+    state = {search: ''};
     handleSubmit = event => {
         event.preventDefault();
-        this.props.handleFormSubmit(this.state.term);
+        this.props.handleFormSubmit(this.state.search);
     }
+
+    fieldStyle = {
+        width: '85%',
+        margin: '0 auto',
+        padding: '10px 0px',
+
+    }
+
+    _handleTextFieldChange = (e) => {
+    this.setState({ search: e.target.value });
+    };
 
     render() {
         
         return (
             <>
-            <h2  style={{textAlign:"center"}}><img style={{width:'200px', height:'100px',justifyContent:'center'}} src='https://www.thatitguy.net/wp-content/uploads/2018/08/1280px-Logo_of_YouTube_2015-2017.svg.png' alt="youtube logo"></img></h2>
             <div className='search-bar ui segment'>
                 <form onSubmit={this.handleSubmit} className='ui form'>
-                    <div className='field'>
-                        <label htmlFor="video-search">Video Search</label>
-                        <input onChange={this.handleChange} name='video-search' type="text" placeholder="Search.."/>
+                    <div className='field' style={this.fieldStyle}>
+                        <TextField onChange={this._handleTextFieldChange} value={this.state.search} style={{width:'100%'}} id="filled-basic" label="What kind of videos would you like to find?" variant="filled" />
                     </div>
                 </form>
             </div>
