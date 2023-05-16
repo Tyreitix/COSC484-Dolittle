@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import VideoList from "./videoList";
 import VideoDetail from "./videoDetail";
 import SearchBar from "./searchBar";
+import '../styles/homepage.css';
 
 export default function Homepage() {
   const [videos, setVideos] = useState([]);
