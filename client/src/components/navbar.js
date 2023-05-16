@@ -45,6 +45,12 @@ export default function Navbar() {
                Login
              </NavLink>
            </li>
+
+           <li className="nav-item">
+             <NavLink className="nav-link" to="/PDFpage">
+               PDFs
+             </NavLink>
+           </li>
          </ul>
        </div>
      </nav>

@@ -5,6 +5,7 @@ import VideoList from "./videoList";
 import VideoDetail from "./videoDetail";
 import SearchBar from "./searchBar";
 import '../styles/homepage.css';
+//import vimeo from '../api/vimeo';
 
 export default function Homepage() {
   const [videos, setVideos] = useState([]);
@@ -13,16 +14,22 @@ export default function Homepage() {
    const type = 'video';
   
   const handleSubmit = async (termFromSearchBar) => {
-    const response = await youtube.get('/search', {
+    const response = await youtube.get('/search',  {
+
       params: {
         q: termFromSearchBar,
         type: type
       }
     });
 
+    
+
     setVideos(response.data.items);
     console.log("this is resp", response);
   };
+
+
+  
 
   const handleVideoSelect = (video) => {
     setSelectedVideo(video);
