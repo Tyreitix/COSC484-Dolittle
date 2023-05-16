@@ -10,6 +10,7 @@ import Edit from "./components/edit";
 import Create from "./components/create";
 import Login from "./components/loginPage";
 import Homepage from "./components/homepage";
+import PDFpage from "./components/pdfpage";
  
 const App = () => {
  return (
@@ -21,6 +22,7 @@ const App = () => {
        <Route path="/create" element={<Create />} />
        <Route path="/login" element={<Login />} />
        <Route path="/users" element={<UserList />} />
+       <Route path="/PDFpage" element={<PDFpage />} />
      </Routes>
    </div>
  );
