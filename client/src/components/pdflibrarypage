@@ -1,0 +1,23 @@
+import React from 'react';
+
+const pdflibrarypage = () => {
+  // Assuming you have an array of file names in your 'library' folder
+  const fileNames = ['file1.pdf', 'file2.pdf', 'file3.pdf'];
+
+  return (
+    <div>
+      <h1>PDF Library</h1>
+      <ul>
+        {fileNames.map((fileName, index) => (
+          <li key={index}>
+            <a href={`library/${fileName}`} target="_blank" rel="noopener noreferrer">
+              {fileName}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default pdflibrarypage;
