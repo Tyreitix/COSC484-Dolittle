@@ -10,6 +10,8 @@ import Edit from "./components/edit";
 import Create from "./components/create";
 import Login from "./components/loginPage";
 import Homepage from "./components/homepage";
+import AboutPage from './components/about';
+
 import PDFpage from "./components/pdfpage";
  
 const App = () => {
@@ -18,10 +20,10 @@ const App = () => {
      <Navbar />
      <Routes>
        <Route exact path="/" element={<Homepage />} />
-       <Route exact path="/login" element={<Login />} />
        <Route path="/edit/:id" element={<Edit />} />
        <Route path="/create" element={<Create />} />
        <Route path="/login" element={<Login />} />
+       <Route path="/about" element={<AboutPage />} />
        <Route path="/users" element={<UserList />} />
        <Route path="/PDFpage" element={<PDFpage />} />
      </Routes>

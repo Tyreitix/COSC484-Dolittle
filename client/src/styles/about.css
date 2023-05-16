@@ -1,0 +1,14 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .about-content {
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    text-align: center;
+  }
+  
