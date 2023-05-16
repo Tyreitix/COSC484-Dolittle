@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/video.css';
+import '../styles/navbar.css'
 
 const VideoItem = ({video , handleVideoSelect}) => {
     return (
