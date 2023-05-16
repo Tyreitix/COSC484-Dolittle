@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import youtube from '../api/youtube';
+import "bootstrap/dist/css/bootstrap.css";
+import VideoList from "./videoList";
+import VideoDetail from "./videoDetail";
+import SearchBar from "./searchBar";
+
+export default function Homepage() {
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const handleSubmit = async (termFromSearchBar) => {
+    const response = await youtube.get('/search', {
+      params: {
+        q: termFromSearchBar
+      }
+    });
+
+    setVideos(response.data.items);
+    console.log("this is resp", response);
+  };
+
+  const handleVideoSelect = (video) => {
+    setSelectedVideo(video);
+  };
+
+  return (
+    <div>
+      <h1>Welcome to the Home Page!</h1>
+      <SearchBar handleFormSubmit={handleSubmit} />
+      <div className='ui grid'>
+        <div className="ui row">
+          <div className="eleven wide column">
+            <VideoDetail video={selectedVideo} />
+          </div>
+          <div className="five wide column">
+            <VideoList handleVideoSelect={handleVideoSelect} videos={videos} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+=======
 import React from "react";
  
 // We import bootstrap to make our application look better.
@@ -9,5 +54,10 @@ import { NavLink } from "react-router-dom";
 //this creates a html page that acts as the first page that loads when you go to our website
 export default function Homepage() {
     return <h1>Welcome to the Home Page!</h1>;
+<<<<<<< HEAD
     
 }
+=======
+}
+>>>>>>> 9248ab852324baf731677d5cbf34b0f89b379d05
+>>>>>>> 54e7d683bc0809cc7af48b156a05ce183086a183

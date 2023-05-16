@@ -2,6 +2,7 @@ import React from "react";
  
 // We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
+import '../styles/navbar.css'
  
 // We import NavLink to utilize the react router.
 import { NavLink } from "react-router-dom";
@@ -26,7 +27,7 @@ export default function Navbar() {
          <span className="navbar-toggler-icon"></span>
        </button>
  
-       <div className="collapse navbar-collapse" id="navbarSupportedContent">
+       <div className="collapse navbar-collapse links" id="navbarSupportedContent">
          <ul className="navbar-nav ml-auto">
          <li className="nav-item">
              <NavLink className="nav-link" to="/">
@@ -37,6 +38,11 @@ export default function Navbar() {
            <li className="nav-item">
              <NavLink className="nav-link" to="/create">
                Create Account
+             </NavLink>
+           </li>
+           <li className="nav-item">
+             <NavLink className="nav-link" to="/login">
+               Login
              </NavLink>
            </li>
          </ul>
