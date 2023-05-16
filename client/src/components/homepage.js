@@ -11,11 +11,14 @@ export default function Homepage() {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
+   const type = 'video';
+  
   const handleSubmit = async (termFromSearchBar) => {
     const response = await youtube.get('/search',  {
 
       params: {
-        q: termFromSearchBar
+        q: termFromSearchBar,
+        type: type
       }
     });
 
