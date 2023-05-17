@@ -2,7 +2,8 @@ import React from "react";
  
 // We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
-import '../styles/navbar.css'
+import '../styles/navbar.css';
+import logo from "../img/logo.png"
  
 // We import NavLink to utilize the react router.
 import { NavLink } from "react-router-dom";
@@ -13,7 +14,7 @@ export default function Navbar() {
    <div className='navDiv'>
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
        <NavLink className="navbar-brand" to="/">
-       <img style={{"width" : 25 + '%'}} src='./dolittle.png'></img>
+       <img style={{"width" : 50 + '%'}} src={logo}></img>
        </NavLink>
        <button
          className="navbar-toggler"
